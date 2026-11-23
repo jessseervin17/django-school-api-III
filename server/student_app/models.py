@@ -2,6 +2,7 @@ from django.db import models
 from .validators import validate_name, validate_school_email, validate_combination_format
 from django.core.validators import MaxValueValidator, MinValueValidator
 
+
 # Create your models here.
 class Student(models.Model):
     name = models.CharField(max_length=255, null = False, blank = False, validators=[validate_name])
